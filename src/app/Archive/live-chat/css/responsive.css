@@ -1,0 +1,101 @@
+@media only screen and (max-width: 1440px) {}
+
+@media only screen and (max-width: 1024px) {
+
+    .close,
+    .close i {
+        /* padding: 0px; */
+        color: #000;
+        text-shadow: none;
+        opacity: 1 !important;
+        font-size: 32px;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+
+
+    header {
+        height: 70px;
+        padding: 5px 20px;
+    }
+
+    header .logo {
+        margin: 0px;
+    }
+
+
+    .show_column {
+        display: block !important;
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .display_none {
+        display: none !important;
+    }
+
+    .display_block {
+        display: block !important;
+    }
+}
+
+
+@media only screen and (max-width: 766px) {
+
+    .carousel.slide {
+        height: 300px;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+
+
+    .show_column {
+        display: block !important;
+    }
+
+    .hiding {
+        display: none !important;
+    }
+
+    .showing {
+        display: block !important;
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 435px) {}
+
+@media only screen and (max-width: 400px) {
+
+    .date_of_birth_wrap select {
+        padding: 10px;
+    }
+
+    .register_popup .modal-header h5.modal-title {
+        font-size: 22px;
+        line-height: 1;
+    }
+
+    .step_box ul li a {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {}

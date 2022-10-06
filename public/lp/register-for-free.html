@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="https://flirtybum.com">
+    <title>FlirtyBum</title>
+    <link rel="stylesheet" href="/register-for-free/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/register-for-free/css/style.css">
+    <link rel="stylesheet" href="/register-for-free/css/responsive.css">
+    <link rel="shortcut icon" href="../media/logos//favicon-fb.png" />
+    <style>
+        .error_msg {
+            text-align: left;
+            display: inherit;
+            color: #c02b2c;
+        }
+        .form_wrapper {
+            position: relative;
+        }
+
+                /* Loader  */
+
+                .LoaderContainer { 
+            background-color: rgb(255 255 255 / 90%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        .loader-text {
+            margin: 20px 0;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #e25771
+        }
+
+        .contenedor-loader {  
+            width: 180px;
+            height: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin: 0 auto;	
+        }
+
+        .contenedor-loader div { 
+            width: 30px;
+            height: 30px;
+            background-color: #e25771;
+            animation: salto 1s alternate infinite;
+        }
+
+        .contenedor-loader div:nth-child(2){ 
+        animation-delay: 0.20s; 
+        }
+
+        .contenedor-loader div:nth-child(3){ 
+        animation-delay: 0.40s; 
+        }
+
+        .contenedor-loader div:nth-child(4){ 
+        animation-delay: 0.60s; 
+        }
+
+        @keyframes salto {
+            from {
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+
+        /* Loader  */
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEVR7VWFYB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZEVR7VWFYB');
+    </script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js'
+        import { getDatabase, ref, onValue, onDisconnect, set } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+
+        var firebaseConfig = {
+            apiKey: "AIzaSyCgjDxemLiKHj0YJlunzCDvQNT1NKA2hnU",
+            authDomain: "chat-hub-1.firebaseapp.com",
+            databaseUrl: "https://chat-hub-1-default-rtdb.firebaseio.com/",
+            projectId: "chat-hub-1",
+            storageBucket: "chat-hub-1.appspot.com",
+            messagingSenderId: "435526947076",
+            appId: "1:435526947076:web:8465e2b856085055020051",
+            measurementId: "G-8P4Q5M8852"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        let userurl = document.location.href;
+        let url = new URL(userurl);
+        let searchParams = new URLSearchParams(url.search);
+        const email = searchParams.get('email');
+
+        const site = window.location.hostname.split(".")[0];
+
+        if (email) {
+            let onVisitLanding = {
+                is_on_page: true,
+                email: email,
+                site: site,
+            }
+
+            let onLeaveLanding = {
+                is_on_page: false,
+                email: email,
+                site: site,
+            }
+
+            const db = getDatabase(app);
+            let emailId = email.replaceAll(".", "_");
+            const visitRef = ref(db, `landing/${site}/visitors/${emailId}/status`)
+            const connectedRef = ref(db, '.info/connected');
+
+            $("#email").val(email);
+            onValue(connectedRef, (snapshot) => {
+                if (snapshot.val() == false) {
+                    return;
+                };
+                onDisconnect(visitRef).set(onLeaveLanding).then(() => {
+                    set(visitRef, onVisitLanding);
+                });
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <main class="idx_register_wrap">
+
+        <section class="main_wrapper">
+            <div class="container">
+                <div class="logo_wrapper">
+                    <h1><img src="../media//logos/flirtybumblack.svg" /></h1>
+                    <div class="batch_wrap">
+                        <img src="/register-for-free/images/icons/badge.png" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="idx_register_form_wrapper">
+            <div class="container">
+                <h2 class="title">REGISTER FOR FREE</h2>
+
+
+                <div class="row">
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12 profiles res_none">
+                        <ul>
+                            <li>
+                                <div class="profile_box">
+                                    <div class="image_wrapper">
+                                        <img src="/register-for-free/images/imgs/profile-img1.png" />
+                                    </div>
+                                    <div class="name">
+                                        <h5 class="title">MelinaX, 24</h5>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="profile_box">
+                                    <div class="image_wrapper">
+                                        <img src="/register-for-free/images/imgs/profile-img2.png" />
+                                    </div>
+                                    <div class="name">
+                                        <h5 class="title">SingleSissel, 29</h5>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <div class="profile_box">
+                                    <div class="image_wrapper">
+                                        <img src="/register-for-free/images/imgs/profile-img3.png" />
+                                    </div>
+                                    <div class="name">
+                                        <h5 class="title">Tuva96, 20</h5>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-8 col-md-8 col-sm-12 register_form_wrapper">
+                        <div class="profile_box_wrapper responsive_box" style="display: none;">
+                            <ul>
+
+
+                                <li>
+                                    <div class="profile_box">
+                                        <div class="image_wrapper">
+                                            <img src="/register-for-free/images/imgs/profile-img5.png" />
+
+                                        </div>
+                                        <div class="name">
+                                            <h5 class="title">DesperatBente, 32</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                    <div class="profile_box">
+                                        <div class="image_wrapper">
+                                            <img src="/register-for-free/images/imgs/profile-img1.png" />
+
+                                        </div>
+                                        <div class="name">
+                                            <h5 class="title">MelinaX, 24</h5>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="form_wrapper">
+                            <form>
+                                <div class="col">
+                                    <div class="mb-4">
+                                        <input type="text" placeholder="Username" class="mb-0" id="username">
+                                        <label class="error_msg error_msg_username"></label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="mb-4">
+                                        <input type="text" placeholder="email" class="mb-0" id="email">
+                                        <span class="error_msg error_msg_email"></span>
+                                    </div>
+                                </div>
+
+                                <div class="LoaderContainer" id="loader_show_hide" style="display: none;">
+                                    <div class="contenedor-loader">
+                                        <div class="loader1"></div>
+                                        <div class="loader2"></div>
+                                        <div class="loader3"></div>
+                                        <div class="loader4"></div>
+                                    </div>
+                                    <h5 class="loader-text">Creating User...</h5>
+                                </div>
+
+    
+                                <div class="col">
+                                    <button type="button" class="get_it_on save_form"> get it on</button>
+                                </div>
+                                <br>
+                                <div class="alert alert-success success_profile_created" role="alert">
+                                    <b>Congratulations!</b> Your profile created successfully.
+                                </div>
+                            </form>
+                        </div>
+                        <div class="profile_box_wrapper res_none">
+                            <ul>
+                                <li>
+                                    <div class="profile_box">
+                                        <div class="image_wrapper">
+                                            <img src="/register-for-free/images/imgs/profile-img4.png" />
+                                        </div>
+                                        <div class="name">
+                                            <h5 class="title">SandyRusts, 24</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="profile_box">
+                                        <div class="image_wrapper">
+                                            <img src="/register-for-free/images/imgs/profile-img5.png" />
+
+                                        </div>
+                                        <div class="name">
+                                            <h5 class="title">DesperatBente, 32</h5>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="profile_box_wrapper responsive_box" style="display: none;">
+                            <ul>
+                                <li>
+                                    <div class="profile_box">
+                                        <div class="image_wrapper">
+                                            <img src="/register-for-free/images/imgs/profile-img6.jpg" />
+                                        </div>
+                                        <div class="name">
+                                            <h5 class="title">DearCher, 28</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="profile_box">
+                                        <div class="image_wrapper">
+                                            <img src="/register-for-free/images/imgs/profile-img2.png" />
+
+                                        </div>
+                                        <div class="name">
+                                            <h5 class="title">SingleSissel, 29</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="profile_box">
+                                        <div class="image_wrapper">
+                                            <img src="/register-for-free/images/imgs/profile-img3.png" />
+
+                                        </div>
+                                        <div class="name">
+                                            <h5 class="title">Tuva96, 20</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                    <div class="profile_box">
+                                        <div class="image_wrapper">
+                                            <img src="/register-for-free/images/imgs/profile-img4.png" />
+
+                                        </div>
+                                        <div class="name">
+                                            <h5 class="title">SandyRusts, 24</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section class="footer_setion">
+            <div class="container">
+                <div class="icon_step_wrapper">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="icon_wrap">
+                                <img src="/register-for-free/images/icons/icon1.svg" />
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="icon_wrap">
+                                <img src="/register-for-free/images/icons/icon3.svg" />
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="icon_wrap">
+                                <img src="/register-for-free/images/icons/icon2.svg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12 box_wrapper">
+                        <div class="step_box_wrapper">
+                            <h4 class="title">Create your profile for free</h4>
+                            <div class="description">
+                                <p>Within minutes you'll be chatting with hot and horny women in your area</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12 box_wrapper">
+                        <div class="step_box_wrapper">
+                            <h4 class="title">Search for hot sex in your area</h4>
+                            <div class="description">
+                                <p>Quickly search & find girls who are online & looking for encounters</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-12 box_wrapper">
+                        <div class="step_box_wrapper">
+                            <h4 class="title">Meet local women now</h4>
+                            <div class="description">
+                                <p>Screw dating - get hooked up with all the girls you want in your area</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/register-for-free/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        } 
+        //alert('Query Variable ' + variable + ' not found');
+    }
+
+
+    function IsEmail(email) {
+        var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (!regex.test(email)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+        jQuery(document).ready(function () {
+
+            $("#loader_show_hide").hide();
+            $("#loader_show_hide_one").hide();
+            $(".error_msg").hide();
+            $(".success_profile_created").hide();
+            var urlEmail = getQueryVariable('param1');    
+            if(urlEmail!="" && urlEmail!=null && urlEmail!=undefined){
+                document.getElementById("email").value = urlEmail;
+            }
+
+
+            setTimeout(function () {
+                $("#username").val('');
+                $("#password").val('');
+                $(".error_msg_username").hide();
+            }, 1000);
+
+            $(".save_form").click(function () {
+                var email = $("#email").val();
+                var username = $("#username").val();
+
+                if (username == '') {
+                    $("#username").focus();
+                    return false;
+                }
+                if (username.includes("@")) {
+                    $(".error_msg_username").show();
+                    $(".error_msg_username").text("Please refrain from using @ character");
+                    return false;
+                }
+                if (email == '') {
+                    $("#email").focus();
+                    return false;
+                }
+                
+                if (IsEmail(email) == false) {
+                    $(".error_msg_email").show();
+                    $(".error_msg_email").text('* Please enter valid email address');
+                    return false;
+                }
+                $("#loader_show_hide").show();
+
+                let url = "https://us-central1-chat-hub-1.cloudfunctions.net/signUpWithEmailAndUser?token=6d41ca31-971f-46b2-8017-1d72b7699d20";
+                let data = {
+                    username: username,
+                    email: email,
+                    site: window.location.hostname.split(".")[0]
+                }
+
+                fetch(url, {
+                    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                    headers: {
+                        'Accept': 'application/json',   
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*'
+                    },
+                    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                    body: JSON.stringify(data) // body data type must match "Content-Type" header
+                }).then(response => response.json())
+                    .then((object) => {
+                        if (object.success) {
+                            let origin = location.origin;
+                            console.log(object);
+                            $(".success_profile_created").show();
+                            $(".error_msg_username").hide();
+                            localStorage.setItem('loginToken',object.data.customToken)
+                            window.location.href=origin;    
+                        } else {
+                            if (object.message.includes("Username")) {
+                                $(".error_msg_username").show();
+                                $("#loader_show_hide").hide();
+                                $(".error_msg_username").text(object.message);
+                            } else if (object.message.includes("Email")) {
+                                $(".error_msg_email").show();
+                                $("#loader_show_hide").hide();
+                                $(".error_msg_email").text(object.message);
+                            }
+                        }
+                    }).catch((reason) => {
+                        $("#loader_show_hide").hide();
+                        console.log(`Failed: ${reason.message}`);
+                    })
+
+            });
+        });
+    </script>
+</body>
+
+</html>

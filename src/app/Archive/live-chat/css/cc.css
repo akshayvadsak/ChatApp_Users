@@ -1,0 +1,1203 @@
+.cc-element-mobile,
+.cc-element-mobile-portrait,
+.cc-element-mobile-landscape {
+    display: none;
+}
+
+.cc-no-user-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cc-static-content h1,
+.cc-static-content h2,
+.cc-static-content h3,
+.cc-static-content h4,
+.cc-static-content h5,
+.cc-static-content h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.cc-static-content p {
+    font-size: 12px;
+}
+
+.cc-static {
+    margin-bottom: 10px;
+}
+
+.cc-just-in-time-tooltip {
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    text-align: center;
+    background-color: #555;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: default;
+}
+
+.cc-just-in-time-tooltip.cc-just-in-time-tooltip-small {
+    position: absolute;
+    top: 5px;
+    right: -13px;
+    text-align: center;
+    background-color: #555;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    line-height: 17px;
+    cursor: default;
+}
+
+.cc-just-in-time-tooltip:before {
+    content: '?';
+    font-weight: bold;
+    color: #fff;
+}
+
+.cc-just-in-time-tooltip:hover p {
+    display: block;
+    transform-origin: 100% 0%;
+
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.cc-just-in-time-tooltip p {
+    /* The tooltip */
+    display: none;
+    text-align: left;
+    background-color: #555;
+    padding: 20px;
+    width: 300px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    right: -4px;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 1.4;
+    z-index: 999;
+}
+
+.cc-just-in-time-tooltip-expand-right p {
+    right: 0;
+    left: -4px;
+}
+
+.cc-just-in-time-tooltip p:before {
+    /* The pointer of the tooltip */
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom-color: #555;
+    right: 10px;
+    top: -12px;
+}
+
+.cc-just-in-time-tooltip-expand-right p:before {
+    right: 0;
+    left: 10px;
+}
+
+.cc-just-in-time-tooltip p:after {
+    /* Prevents the tooltip from being hidden */
+    width: 100%;
+    height: 40px;
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+
+/* CSS animation */
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.cc-just-in-time-tooltip p strong {
+    font-weight: bold;
+    margin-right: 3px;
+    color: inherit;
+}
+
+.cc-just-in-time-tooltip p a {
+    font: 12px arial, sans-seriff;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.cc-just-in-time-tooltip a {
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+.cc-link-regular-underline {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.cc-popup {
+    background: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cc-popup.cc-popup-nonblocking {
+    position: inherit;
+}
+
+.cc-popup.cc-popup-banner {
+    position: relative;
+}
+
+.cc-popup .cc-popup-hide,
+.cc-static .cc-popup-hide {
+    display: none;
+}
+
+.typeform-full-screen {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cc-popup-content {
+    background: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    width: 96%;
+    max-height: 98%;
+    max-width: 760px;
+    overflow: auto;
+    padding: 0px 30px 30px 30px;
+    transform: translate(0vw, 30vh);
+    margin: 0 auto;
+    position: relative;
+    color: #333;
+}
+
+.cc-popup-content h1,
+.cc-popup-content h2,
+.cc-popup-content h3,
+.cc-popup-content h4 {
+    color: #333;
+    background-color: inherit;
+    border: inherit;
+}
+
+.cc-popup-content .cc-popup-color-danger,
+.cc-popup-content a.cc-popup-color-danger,
+.cc-popup-content a.cc-popup-color-danger:hover,
+.cc-popup-content a.cc-popup-color-danger:active,
+.cc-popup-content a.cc-popup-color-danger:visited {
+    color: #ed1d1d;
+}
+
+.cc-popup-content .cc-popup-color-secondary,
+.cc-popup-content a.cc-popup-color-secondary,
+.cc-popup-content a.cc-popup-color-secondary:hover,
+.cc-popup-content a.cc-popup-color-secondary:active,
+.cc-popup-content a.cc-popup-color-secondary:visited {
+    color: #2578d6;
+}
+
+.cc-popup-content .cc-popup-fontweight-bold {
+    font-weight: 700;
+}
+
+.cc-popup-content p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+    color: #000;
+}
+
+.cc-popup-content p a,
+.cc-popup-content p a:hover,
+.cc-popup-content p a:active,
+.cc-popup-content p a:visited {
+    color: #000;
+}
+
+.cc-popup-content ul {
+    list-style: none;
+    padding-left: 18px;
+}
+
+.cc-popup-content li {
+    font-size: 13px;
+    position: relative;
+}
+
+.cc-popup-content li:before {
+    background: #000;
+    content: "";
+    display: block;
+    height: 8px;
+    left: -18px;
+    position: absolute;
+    top: 6px;
+    width: 8px;
+}
+
+.cc-popup-header {
+    text-align: center;
+    text-align: center;
+}
+
+.cc-popup-header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.cc-popup-segments h1 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cc-popup-header h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.cc-popup-segments {
+    border: 1px solid #cecece;
+    overflow: auto;
+    max-height: 170px;
+    margin-bottom: 30px;
+    padding: 0px 15px 0px 15px;
+    line-height: 1.5;
+}
+
+.cc-no-confirmation .cc-popup-segments {
+    height: 240px;
+}
+
+.cc-no-foreword .cc-popup-segments {
+    height: 240px;
+}
+
+.cc-no-confirmation.cc-no-foreword .cc-popup-segments {
+    height: 260px;
+}
+
+.cc-popup-confirm-buttons button {
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 10px;
+    font-weight: inherit;
+    text-transform: inherit;
+    width: inherit;
+    text-shadow: inherit;
+    box-shadow: inherit;
+}
+
+.cc-popup-button-confirm {
+    background: #63c500;
+}
+
+.cc-popup-button-refute {
+    float: right;
+    background: #ed1d1d;
+}
+
+.cc-popup-content h3 {
+    font: bold 14px arial, sans-seriff;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.cc-popup-close {
+    font: bold 24px arial, sans-seriff;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+/*
+Additional cc-popup classes that can be added on the collectors:
+ - cc-popup-banner              (Makes the popup appear as a banner but with the full contents of a consent)
+ - cc-popup-banner-align-top    (moves the banner completely to the top)
+ - cc-popup-banner-align-bottom (moves the banner completely to the top)
+ - cc-popup-hide-contents       (makes the background dark enough to hide the content of the website)
+ - cc-float-right               (makes the element float right, possibly with slight adjustments specific for CC)
+*/
+
+.cc-float-right {
+    float: right;
+}
+
+.cc-popup-banner.cc-popup .cc-popup-hide {
+    display: inline-block;
+}
+
+.cc-popup-banner .cc-popup-content {
+    background: rgba(57, 57, 57, 1);
+    max-width: 100%;
+    width: 100%;
+    /*text-align: center;*/
+    color: rgb(255, 255, 255);
+    padding: 5px 10px 5px 10px;
+}
+
+.cc-popup-banner-align-top .cc-popup-content {
+    top: 0;
+}
+
+.cc-popup-banner-align-bottom .cc-popup-content {
+    top: initial;
+    bottom: 30vh;
+    position: fixed;
+    overflow-x: hidden;
+}
+
+.cc-popup-banner-align-bottom .cc-popup-confirm-buttons {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cc-popup-banner .cc-popup-segments {
+    height: auto;
+    padding: 0;
+    width: 100%;
+    margin: 0 0 0 50%;
+    transform: translateX(-50%);
+    border: 0;
+}
+
+.cc-popup-banner .cc-popup-confirm-buttons button {
+    border-radius: 3px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.cc-popup-banner .cc-tickbox,
+.cc-popup-banner .cc-radio {
+    text-align: left;
+}
+
+.cc-popup-banner .cc-popup-content h1,
+.cc-popup-banner .cc-popup-content h2,
+.cc-popup-banner .cc-popup-content h3,
+.cc-popup-banner .cc-popup-content h4 {
+    color: #FFF;
+}
+
+.cc-popup-banner-align-bottom .cc-popup-confirm-buttons button {
+    /*    border-radius: 3px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;*/
+}
+
+.cc-popup-banner-align-bottom .cc-popup-segments {
+    /*width: 100%;*/
+}
+
+.cc-popup-banner .cc-tickbox .cc-tickbox-content,
+.cc-popup-banner .cc-radio .cc-radio-content {
+    display: block;
+    color: #949494;
+}
+
+.cc-popup-banner .cc-tickbox .cc-tickbox-content a,
+.cc-popup-banner .cc-radio .cc-radio-content a {
+    color: #FFF;
+}
+
+.cc-popup-banner .cc-popup-button-confirm {
+    width: auto;
+}
+
+.cc-popup-banner .cc-popup-button-refute {
+    width: auto;
+    float: none;
+    margin-left: 15px;
+}
+
+.cc-popup-banner.cc-popup-align-top .cc-popup-content {
+    top: 0;
+    transform: translateX(0) !important;
+}
+
+.cc-popup.cc-popup-hide-contents {
+    background: rgb(8, 8, 8);
+}
+
+.cc-banner {
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.cc-banner-bottom {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+}
+
+.cc-banner-top {
+    position: relative;
+}
+
+.cc-banner-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100%;
+}
+
+.cc-banner-inner {
+    background-color: #000000;
+    bottom: 0;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.6;
+    padding-left: 10px;
+    padding-top: 7px;
+}
+
+.cc-banner.cc-tophalf-banner {
+    height: 50vh;
+    background-color: white;
+    color: black;
+}
+
+.cc-tophalf-banner .cc-banner-wrapper {
+    height: 100%;
+}
+
+.cc-tophalf-banner .cc-banner-inner {
+    background-color: inherit;
+}
+
+.cc-banner-summary {
+    color: #FFFFFF;
+    font-size: 12px;
+    height: 50px;
+    left: 10px;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.cc-banner-summary a {
+    color: #ffffff;
+}
+
+.cc-tophalf-banner .cc-banner-summary,
+.cc-tophalf-banner .cc-banner-summary a {
+    color: black;
+}
+
+.cc-banner-button-confirm {
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 1;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.cc-banner-button-refute {
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 1;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.center-popup-segments .cc-popup-segments {
+    text-align: center;
+}
+
+.cc-tickbox input,
+.cc-radio input {
+    cursor: pointer;
+}
+
+.cc-tickbox.cc-tickbox-hide-checkbox input,
+.cc-radio.cc-radio-hide-checkbox input {
+    display: none;
+}
+
+.cc-tickbox-on-registration #conditions,
+.cc-radio-on-registration #conditions {
+    display: none;
+}
+
+.cc-tickbox .cc-tickbox-label,
+.cc-radio .cc-radio-label {
+    float: none;
+    margin-right: 10px;
+    width: auto;
+    display: inline;
+    font-weight: inherit;
+}
+
+.cc-popup-content .cc-popup-segment .cc-tickbox-label,
+.cc-popup-content .cc-popup-segment .cc-radio-label {
+    font-weight: 600;
+}
+
+.cc-tickbox .cc-tickbox-content,
+.cc-radio .cc-radio-content {
+    display: none;
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+
+    .cc-element-mobile,
+    .cc-element-mobile-landscape {
+        display: block;
+    }
+
+    .cc-popup-content {
+        max-width: 100%;
+        max-height: 90%;
+        min-width: 85%;
+        width: auto;
+        padding: 10px;
+    }
+
+    .cc-popup-header h1 {
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    .cc-popup-segments {
+        padding: 10px;
+    }
+
+    .cc-popup-confirm-buttons {
+        position: relative;
+        padding: 0px;
+    }
+
+    .cc-popup-banner-align-bottom .cc-popup-confirm-buttons {
+        position: relative;
+        padding: 0px;
+        text-align: center;
+    }
+
+    .cc-popup-confirm-buttons button {
+        margin-top: 10px;
+    }
+
+    .cc-popup-segments,
+    .cc-no-foreword .cc-popup-segments,
+    .cc-no-confirmation .cc-popup-segments {
+        height: auto;
+        overflow: auto;
+        margin-bottom: 0;
+        max-height: 150px;
+    }
+
+    .cc-popup.cc-popup-hide-contents {
+        background: rgb(255, 255, 255);
+    }
+}
+
+@media (orientation: landscape) and (max-width: 737px) {
+
+    .cc-popup-content {
+        width: 100%;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 375px) {
+    .cc-popup-header h1 {
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+
+    .cc-popup-segments {
+        padding: 0px 5px 0px 5px;
+    }
+
+    .cc-popup-content p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 359px) {
+    .cc-popup-header h1 {
+        margin-bottom: 5px;
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .cc-popup-segments {
+        padding: 0px 5px 0px 5px;
+    }
+
+    .cc-popup-content p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        line-height: 1.3;
+        font-size: 15px;
+    }
+
+    .cc-popup-confirm-buttons button {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .cc-popup-content {
+        padding: 5px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 767px) {
+
+    .cc-element-mobile,
+    .cc-element-mobile-portrait {
+        display: block;
+    }
+
+    .cc-banner,
+    .cc-banner-inner {
+        height: 60px;
+    }
+
+    .cc-popup-content {
+        max-width: 100%;
+        max-height: 90%;
+        width: 100%;
+        padding: 10px;
+        transform: translate(0vw, 0vh);
+    }
+
+    .cc-popup-header h1 {
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    .cc-popup-segments {
+        padding: 10px;
+    }
+
+    .cc-popup-confirm-buttons {
+        position: relative;
+        padding: 0px;
+    }
+
+    .cc-popup-banner-align-bottom .cc-popup-confirm-buttons {
+        position: relative;
+        padding: 0px;
+        text-align: center;
+    }
+
+    .cc-popup-confirm-buttons button {
+        margin-top: 10px;
+        float: inherit;
+        width: 100%;
+    }
+
+    .cc-popup-segments,
+    .cc-no-foreword .cc-popup-segments,
+    .cc-no-confirmation .cc-popup-segments {
+        height: auto;
+        overflow: auto;
+        margin-bottom: 0;
+        max-height: 40vh;
+    }
+
+    .cc-popup.cc-popup-hide-contents {
+        background: rgb(255, 255, 255);
+    }
+
+    .cc-popup-header .cc-popup-color-danger {
+        font-size: 18px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 374px) {
+    .cc-popup-header h1 {
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+
+    .cc-popup-segments {
+        padding: 0px 5px 0px 5px;
+    }
+
+    .cc-popup-content p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 359px) {
+    .cc-popup-header h1 {
+        margin-bottom: 5px;
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .cc-popup-segments {
+        padding: 0px 5px 0px 5px;
+    }
+
+    .cc-popup-content p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        line-height: 1.3;
+        font-size: 15px;
+    }
+
+    .cc-popup-confirm-buttons button {
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+/* ----------------------- */
+/* #multiConsent_stepStyle */
+/* ----------------------- */
+
+#multiConsent_stepStyle {
+    background-color: transparent;
+    position: fixed;
+    width: 100vw;
+    min-height: 110vh;
+}
+
+#multiConsent_stepStyle a {
+    color: #000;
+    text-decoration: underline;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-progress {
+    background-color: #dfdfdf;
+    height: 10px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-radio-progress {
+    height: 100%;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-radio-progress.cc-radio-progress-recorded-consent {
+    background-color: #60b767;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-radio-progress.cc-radio-progress-active {
+    background-color: #7bed84;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-summary {
+    background-color: #454545;
+    color: #fff;
+    line-height: 80px;
+    padding-top: 20px;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-summary img {
+    vertical-align: bottom;
+    border-radius: 50%;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-summary p {
+    word-break: break-word;
+    white-space: normal;
+    padding: 0 5px;
+    line-height: 18px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner {
+    height: 100%;
+    opacity: 1;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio {
+    height: 100%;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-input {
+    display: none;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label {
+    display: block;
+    margin-right: 0;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-refute,
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+    border: 1px solid #dfdfdf;
+    position: relative;
+    top: 20vh;
+    height: 35px;
+    min-width: 35px;
+    border-radius: 25px;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-refute {
+    text-align: center;
+    background-image: url(/img/icons/broken-heart@2x.png);
+    background-repeat: no-repeat;
+    background-position: 10px 4px;
+    background-size: 25px 25px;
+    color: #dfdfdf;
+    cursor: pointer;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+    text-align: center;
+    background-image: url(/img/icons/heart@2x.png);
+    background-repeat: no-repeat;
+    background-position: 10px 4px;
+    background-size: 25px 25px;
+    background-color: #60b767;
+    border: 1px solid #60b767;
+    color: #dfdfdf;
+    cursor: pointer;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-button-refute,
+#multiConsent_stepStyle .cc-banner-wrapper .cc-banner-button-confirm {
+    display: none;
+}
+
+#multiConsent_stepStyle .cc-banner-wrapper .cc-radio-error {
+    position: absolute;
+    top: 10px;
+    color: #f00;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+@media (min-width: 1281px) {
+    #multiConsent_stepStyle .cc-banner-wrapper {
+        width: 1200px;
+        height: 500px;
+        position: relative;
+        top: 10vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-progress {
+        width: 60%;
+        left: 40%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-summary {
+        width: 40%;
+        height: 100%;
+        display: block;
+        border-bottom: 0;
+        left: 0;
+        top: 0;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-summary img {
+        width: 40%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner {
+        width: 60%;
+        position: relative;
+        right: -40%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio {
+        height: 100%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label {
+        top: 30%;
+        height: 170px;
+        padding: 0 5px;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-refute,
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+        width: 200px;
+        left: 20%;
+        display: inline-block;
+        top: 100px;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-refute {
+        position: relative;
+        left: -70px;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+        margin-bottom: 10px;
+        position: relative;
+        left: 380px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #multiConsent_stepStyle .cc-banner-wrapper {
+        width: 980px;
+        height: 500px;
+        position: relative;
+        top: 10vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-progress {
+        width: 60%;
+        left: 40%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-summary {
+        width: 40%;
+        height: 100%;
+        display: block;
+        border-bottom: 0;
+        left: 0;
+        top: 0;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-summary img {
+        width: 40%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner {
+        width: 60%;
+        position: relative;
+        right: -40%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label {
+        top: 30%;
+        height: 170px;
+        padding: 0 5px;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-refute,
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+        width: 200px;
+        left: 20%;
+        display: inline-block;
+        top: 100px;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-refute {
+        position: relative;
+        left: -120px;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+        margin-bottom: 10px;
+        position: relative;
+        left: 300px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #multiConsent_stepStyle {
+        overflow: scroll;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper {
+        width: 630px;
+        height: 600px;
+        position: relative;
+        top: 10vh;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-progress {
+        width: 100%;
+        left: 0;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-summary {
+        height: 250px;
+        display: block;
+        left: 0;
+        top: 10px;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-summary img {
+        width: 20%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner {
+        width: 100%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label {
+        top: 300px;
+        height: 170px;
+        padding: 0 5px;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-refute,
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+        display: block;
+        width: 60%;
+        top: 40%;
+        left: 20%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+        margin-bottom: 10px;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-radio-error {
+        position: absolute;
+        top: 260px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #multiConsent_stepStyle .cc-banner-inner .cc-radio-label {
+        height: 200px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-progress {
+        width: 100%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-summary {
+        display: none;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner {
+        width: 100%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label {
+        top: 20vh;
+        height: 100px;
+        padding: 0 5px;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-refute,
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+        display: block;
+        width: 60vw;
+        left: 20vw;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-progress {
+        width: 100%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-summary {
+        display: none;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner {
+        width: 100%;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label {
+        top: 20vh;
+        height: 200px;
+        padding: 0 5px;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-refute,
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+        display: block;
+        width: 60vw;
+        left: 20vw;
+    }
+
+    #multiConsent_stepStyle .cc-banner-wrapper .cc-banner-inner .cc-radio-label-confirm {
+        margin-bottom: 10px;
+    }
+}

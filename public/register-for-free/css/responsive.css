@@ -1,0 +1,180 @@
+@media only screen and (max-width: 1440px) {}
+
+
+@media only screen and (max-width: 768px) {
+
+    .register_form_wrapper .form_wrapper {
+        width: 100%;
+        padding: 40px 30px;
+        margin-bottom: 20px;
+    }
+
+    .main_wrapper {
+        padding-top: 25px;
+    }
+
+    .register_form_wrapper .form_wrapper .col {
+        padding: 0px;
+    }
+
+    .idx_register_form_wrapper .profiles {
+        padding: 0px 0px 0px 20px;
+    }
+
+    .profile_box_wrapper ul li {
+
+        margin: 0px 10px;
+        width: 47%;
+    }
+
+    .profile_box_wrapper {
+        text-align: center;
+    }
+
+    .col-lg-4.col-md-4.col-sm-12.col-12.box_wrapper {
+        padding: 10px;
+    }
+
+    .step_box_wrapper {
+        padding: 20px;
+    }
+
+    .icon_step_wrapper .icon_wrap {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    .profile_box .image_wrapper {
+        position: relative;
+        width: 90%;
+        margin: 0px auto 10px;
+    }
+
+    button.get_it_on {
+        padding: 12px;
+        font-size: 16px;
+        line-height: 1.3;
+        min-width: 160px;
+    }
+
+    ::placeholder {
+        font-size: 16px;
+    }
+
+    .checkbox {
+        margin-bottom: 10px;
+    }
+
+    .form_wrapper .col input[type="checkbox"]+span {
+        font-size: 14px;
+
+    }
+
+    .form_wrapper select,
+    .form_wrapper .col input {
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    .register_form_wrapper .form_wrapper {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .idx_register_form_wrapper h2.title {
+        font-size: 22px;
+        line-height: 1.5;
+        margin: 0px 0px 5px;
+    }
+
+    .idx_register_form_wrapper {
+        padding: 0px;
+    }
+
+    .main_wrapper {
+        padding-top: 0px;
+    }
+
+    .idx_register_wrap .logo_wrapper {
+        position: relative;
+        width: 200px;
+        margin: 0px auto;
+    }
+
+    .batch_wrap {
+        display: none;
+    }
+
+    .profile_box .image_wrapper img {
+        border-radius: 10px;
+    }
+
+    .name h5.title {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .profile_box_wrapper ul li {
+        margin: 0px 5px;
+        width: 45%;
+    }
+
+    .profile_box_wrapper.responsive_box {
+        display: block !important;
+    }
+
+    .res_none,
+    section.footer_setion {
+        display: none;
+    }
+
+    .profile_box .name {
+        margin-top: 5px;
+        padding: 7px 10px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+
+}
+
+
+@media only screen and (max-width: 375px) {
+
+    button.get_it_on {
+        padding: 10px;
+        font-size: 14px;
+        line-height: 1.3;
+        min-width: 130px;
+    }
+
+    .form_wrapper .col input[type="checkbox"]+span {
+        font-size: 12px;
+    }
+
+    .form_wrapper select,
+    .form_wrapper .col input {
+        padding: 8px 20px;
+        margin-bottom: 10px;
+    }
+
+    .register_form_wrapper .form_wrapper {
+        padding: 10px;
+    }
+
+
+    .idx_register_form_wrapper h2.title {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .profile_box_wrapper ul li {
+        margin: 0px auto 20px !important;
+        width: 142px;
+        display: inline-block;
+    }
+
+}

@@ -1,0 +1,640 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+   .landing-overview {
+      .left-overview {
+         width: 300px;
+
+         .sidechat-info {
+            .msg-head {
+               padding: 15px 20px;
+            }
+
+            .chatprofile-grid {
+               .MuiListItemButton-root {
+                  padding-left: 20px;
+               }
+            }
+         }
+      }
+   }
+
+   .landing-overview {
+      .right-overview {
+         width: calc(100% - 300px);
+      }
+   }
+
+   .FixTop-head {
+      padding: 0 20px;
+      width: calc(100% - 300px);
+      gap: 20px;
+   }
+
+   .logoflirty {
+      min-width: 90px;
+
+      img {
+         height: 30px !important;
+      }
+   }
+
+   .rightNavbar {
+      width: calc(100% - 110px);
+      overflow: auto;
+
+      .nearby-sublink {
+         width: max-content;
+         margin-left: auto;
+      }
+   }
+
+   .page-body {
+      padding: 0 20px 15px;
+      min-height: calc(100vh - 160px);
+   }
+
+   .nearby-distance-range-info {
+      padding: 15px 0px 20px;
+   }
+
+   .MianFooter {
+      padding: 0 20px;
+
+      .FooterLinks {
+         height: auto;
+         justify-content: center;
+      }
+
+      .copyRight-text {
+         padding: 0 0 15px;
+         justify-content: center;
+      }
+   }
+
+   .messagePanel-pageBody {
+      min-height: calc(100vh - 70px);
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1220px) {
+   .rightNavbar {
+      width: calc(100% - 110px);
+      overflow: auto;
+
+      .nearby-sublink {
+         width: max-content;
+         margin-left: auto;
+      }
+   }
+}
+
+@media (max-width: 991.98px) {
+   .page-body {
+      padding: 0 20px 15px;
+      min-height: calc(100vh - 160px);
+   }
+
+   // Sidechat nav
+
+   .sidechat-info {
+      .msg-head {
+         padding: 15px 20px;
+      }
+
+      .chatprofile-grid {
+         .MuiListItemButton-root {
+            padding: 10px 20px;
+         }
+      }
+   }
+
+   .menuItemList {
+      .MuiListItemButton-root {
+         padding: 10px 20px;
+         border-bottom: 1px solid #27262C;
+
+         .menuItem {
+            border-bottom: 0;
+            padding: 10px 0;
+         }
+      }
+   }
+
+   // Sidechat nav end
+
+   // Profile Page 
+
+   .profile-overview {
+      .user-info {
+         max-width: 100%;
+
+         .profile-thumb {
+            width: 200px;
+            height: 200px;
+         }
+
+         .profile-icons {
+            padding: 15px 0;
+            justify-content: flex-start;
+         }
+      }
+
+      .about-user {
+         max-width: 100%;
+         padding: 15px 0;
+      }
+   }
+
+   .Photo-gallary {
+      .multi-imgs {
+         li {
+            width: 70px;
+            height: 70px;
+         }
+      }
+   }
+
+   ul.check-list {
+      li {
+         max-width: 47%;
+      }
+   }
+
+   .modal-dialog {
+      width: 93%;
+   }
+
+   // Profile Page end
+
+   .messagePanel-pageBody {
+      min-height: calc(100vh - 70px);
+   }
+}
+
+@media (max-width: 767.98px) {
+
+   .InnerScrolls {
+      overflow: auto;
+   }
+
+   .MianFooter {
+      padding: 0 15px;
+      height: 100px;
+
+      .FooterLinks {
+         padding: 10px 0 5px;
+         height: auto;
+
+         ul {
+            gap: 0 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 0 5px;
+         }
+      }
+
+      .copyRight-text {
+         justify-content: center;
+         padding: 0 0 10px;
+      }
+   }
+
+   .profile-icons {
+      .btn-icon {
+         width: 100% !important;
+         height: 40px !important;
+      }
+   }
+
+   .msg-head {
+      position: fixed;
+      z-index: 111;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+   }
+
+   .PanelBox .chat-nav-list {
+      display: none;
+   }
+
+   .ChaterUser {
+      .profile-img {
+         display: none;
+      }
+   }
+
+   // body structure 
+
+   .landing-overview {
+      flex-wrap: wrap;
+
+      .left-overview {
+         width: 100%;
+         position: unset;
+         height: auto;
+
+         .chat-nav-list {
+            height: auto;
+         }
+      }
+
+      .right-overview {
+         width: 100%;
+         margin-bottom: 70px;
+         margin-top: 70px;
+      }
+
+      .page-body {
+         margin: 0;
+      }
+   }
+
+   .modal-dialog {
+      margin: 0.5rem auto;
+      padding: 15px 0;
+   }
+
+   // body structure end
+
+   // Header
+
+   .FixTop-head {
+      position: unset;
+      height: auto;
+      padding: 15px;
+      width: 100%;
+      flex-wrap: inherit;
+      justify-content: space-between;
+      gap: 15px;
+
+      h2 {
+         width: 100px;
+         text-align: left;
+         font-size: 16px !important;
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+      }
+
+      .nearby-sublink {
+         gap: 15px;
+      }
+
+      .view-more-btn {
+         button {
+            width: 100%;
+            max-width: max-content;
+            min-width: max-content;
+         }
+      }
+   }
+
+   .usercredit {
+      h4 {
+         margin-bottom: 0;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+      }
+
+      i {
+         font-size: 20px;
+      }
+   }
+
+   .view-more-btn {
+      button {
+         width: 100%;
+      }
+   }
+
+   // Header end
+
+   // Sidechat nav
+
+   .sidechat-info {
+      .msg-head {
+         padding: 15px;
+      }
+   }
+
+   // Sidechat nav end
+
+   // Landing page 
+
+   .nearby-distance-range-info {
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 15px;
+   }
+
+   .nearby-profile {
+      img {
+         height: 175px;
+      }
+   }
+
+   .customRow {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .customdive {
+         width: 165px;
+         height: 165px;
+      }
+   }
+
+   // Landing page end
+
+   // Message Panel 
+
+   .messagePanel-pageBody {
+      // min-height: calc(100vh - 220px);
+      min-height: calc(100vh - 301.5px);
+      max-height: calc(100vh - 301.5px);
+   }
+
+   // .messagePanel-FixTop {
+   //    position: sticky;
+   //    top: 70px;
+   // }
+
+   .messagePanel {
+      height: calc(100vh - 301.5px);
+      padding: 15px 0 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+   }
+
+   .ChaterTyper {
+      // position: unset;
+      width: 100%;
+      padding: 0;
+      height: auto;
+
+      .TextArea {
+         width: 100%;
+         padding: 10px;
+         flex-wrap: wrap;
+         gap: 5px;
+
+         .TextAreaName {
+            background: #1e1d25;
+            height: 60px;
+         }
+      }
+
+      .ChaterTyper-icons {
+         gap: 10px;
+         padding: 5px;
+         justify-content: flex-end;
+         width: 100%;
+         position: relative;
+
+         .iconsAccess {
+            ul {
+               li {
+                  button {
+                     width: 46px !important;
+                     height: 46px !important;
+
+                     label {
+                        min-width: 100%;
+
+                        i {
+                           font-size: 20px;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+
+         button {
+            min-width: 46px;
+            height: 46px;
+            font-size: 14px;
+            box-shadow: none;
+         }
+
+         .CreditBtn {
+            position: absolute;
+            left: 0;
+
+            button {
+               background: #61907e !important;
+            }
+         }
+
+         .SendBtn {
+            button {
+               img {
+                  width: 20px;
+               }
+            }
+         }
+      }
+   }
+
+   .rightHeader {
+      width: calc(100% - 165px);
+      overflow: auto;
+
+      .nearby-sublink {
+         width: max-content;
+         white-space: nowrap;
+      }
+   }
+
+   .messagePanel-FixTop {
+      .chatprofile-grid {
+         margin-bottom: 0 !important;
+         width: 100%;
+
+         .profile-details {
+            h2 {
+               width: 100%;
+            }
+         }
+      }
+
+      .chatSublinks {
+         display: none;
+      }
+   }
+
+   // Message Panel end
+
+   // Profile Page 
+
+   .profile-overview {
+      .user-info {
+         max-width: 100%;
+
+         .profile-thumb {
+            width: 100%;
+            height: 350px;
+         }
+
+         .updateProfile {
+            width: 290px;
+            height: 290px;
+            margin: auto;
+         }
+      }
+
+      .about-user {
+         max-width: 100%;
+         padding: 25px 0 0;
+      }
+   }
+
+   .Photo-gallary {
+      .multi-imgs {
+         li {
+            width: 75px;
+            height: 75px;
+         }
+      }
+   }
+
+   // Profile Page end
+
+   .range-data-info p {
+      font-size: 20px;
+      color: #b5b5b5;
+      font-weight: 500;
+   }
+
+   .order02 {
+      order: 1;
+      margin: 10px 0px;
+      text-align: center;
+   }
+
+   .order01 {
+      order: 3;
+
+   }
+
+   .copyright {
+      text-align: center;
+
+      span {
+         top: auto;
+         font-size: 12px;
+      }
+   }
+
+   .footer_menu {
+      ul {
+         li {
+            margin: 0px 6px;
+
+            a {
+               font-size: 11px;
+               font-weight: 400;
+               line-height: 1.3;
+            }
+         }
+      }
+   }
+
+   .outerpages {
+      .right-overview {
+         margin-top: 0;
+         margin-bottom: 0;
+      }
+   }
+
+   .CmsTopBanner {
+      margin-top: 40px;
+   }
+
+   .termscontion {
+      .form-check-custom {
+         font-size: 12px;
+         line-height: 24px;
+      }
+   }
+
+   .inputdesign select {
+      margin-bottom: 10px;
+   }
+
+   .TitlePopup {
+      margin-bottom: 20px;
+   }
+
+   #registermodal {
+      .modal-dialog {
+         margin: 0;
+         top: 50%;
+         left: 50%;
+         -webkit-transform: translate(-25%, -50%);
+         transform: translate(-50%, -50%);
+         position: absolute;
+         max-width: unset;
+      }
+
+      .feature_box_img {
+         display: none;
+      }
+
+      .main_cover_wrap {
+         padding: 20px;
+         background-color: #fff;
+         min-width: unset;
+         border-radius: 10px;
+      }
+   }
+
+}
+
+@media (max-width: 375px) {
+   .nearby-profile {
+      img {
+         height: 165px;
+      }
+   }
+}
+
+@media (max-width: 320px) {
+   .nearby-profile {
+      img {
+         height: 140px;
+      }
+   }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+
+   .customdive {
+      width: 125px !important;
+      height: 125px !important;
+   }
+
+   .nearby-profile {
+      img {
+         height: auto;
+      }
+   }
+
+}
+
+.usercredit {
+   h4 {
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
+
+   i {
+      font-size: 20px;
+   }
+}
